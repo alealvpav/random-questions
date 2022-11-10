@@ -3,6 +3,7 @@ from django.db import models
 
 class Question(models.Model):
     question = models.CharField(max_length=300)
+    keyword = models.CharField(max_length=50, default="")
 
     def __str__(self):
         q_mark = "" if self.question[:-1] == "?" else "?"
